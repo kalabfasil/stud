@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kegna academy | school services</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+</head>
+<body class="bg-gray-50">
+
+    <nav class="bg-white shadow-sm fixed w-full z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                       <i class="fas fa-school"></i>
+                        <span class="text-xl font-bold text-blue-600">Kegna Academy</span>
+                    </div>
+                </div>
+                <div class="hidden md:ml-6 md:flex md:items-center md:space-x-8">
+                    <a href="#home" class="nav-link text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium">Home</a>
+                    <a href="#services" class="nav-link text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium">Services</a>
+                    <a href="#about" class="nav-link text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium">About</a>
+                    <a href="#testimonials" class="nav-link text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium">Testimonials</a>
+                    <a href="#contact" class="nav-link text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium">Contact</a>
+                    <button onclick="openBookingModal()" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-300 transform hover:scale-105">
+                        Checkout
+                    </button>
+                </div>
+                <div class="-mr-2 flex items-center md:hidden">
+                    <button type="button" id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100 focus:outline-none">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 text-base font-medium text-gray-900 hover:text-blue-600">Home</a>
+                <a href="#services" class="block px-3 py-2 text-base font-medium text-gray-900 hover:text-blue-600">Services</a>
+                <a href="#about" class="block px-3 py-2 text-base font-medium text-gray-900 hover:text-blue-600">About</a>
+                <a href="#testimonials" class="block px-3 py-2 text-base font-medium text-gray-900 hover:text-blue-600">Testimonials</a>
+                <a href="#contact" class="block px-3 py-2 text-base font-medium text-gray-900 hover:text-blue-600">Contact</a>
+                <button onclick="openBookingModal()" class="w-full text-left px-3 py-2 text-base font-medium text-blue-600 hover:text-blue-800">
+                    Checkout
+                </button>
+            </div>
+        </div>
+    </nav>
+
+   
+    <section id="home" class="hero-gradient pt-24 pb-16 md:pt-32 md:pb-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex md:items-center md:justify-between">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">School services </h1>
+                    <p class="text-xl text-blue-100 mb-8">our School services aim to create a safe, supportive environment that promotes students’ overall growth and academic success.</p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <button onclick="openBookingModal()" class="bg-white text-blue-600 hover:bg-blue-50 px-6 py-3 rounded-lg font-semibold text-lg transition duration-300 transform hover:scale-105">
+                            Call Now <i class="fas fa-arrow-right ml-2"></i>
+                        </button>
+                        <button class="border-2 border-white text-white hover:bg-white hover:bg-opacity-10 px-6 py-3 rounded-lg font-semibold text-lg transition duration-300">
+                            <i class="fas fa-phone-alt mr-2"></i> (+251)0222-12-27-28
+                        </button>
+                    </div>
+                    <div class="mt-8 flex items-center">
+                        <div class="flex -space-x-2">
+                            <img class="inline-block h-10 w-10 rounded-full ring-2 ring-white" src="https://randomuser.me/api/portraits/women/12.jpg" alt="">
+                            <img class="inline-block h-10 w-10 rounded-full ring-2 ring-white" src="https://randomuser.me/api/portraits/men/32.jpg" alt="">
+                            <img class="inline-block h-10 w-10 rounded-full ring-2 ring-white" src="https://randomuser.me/api/portraits/women/44.jpg" alt="">
+                        </div>
+                        <div class="ml-4">
+                            <p class="text-white font-medium">Trusted by 9000+ happy customers</p>
+                            <div class="flex items-center">
+                                <div class="flex text-yellow-400">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="text-white ml-2">4.9 (1200+ reviews)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 relative">
+                    <img src="OIP.jpeg" alt="Happy cleaning professional" class="rounded-lg shadow-xl floating w-full max-w-lg mx-auto">
+                    <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-lg shadow-lg hidden md:block">
+                        <div class="flex items-center">
+                            <div class="bg-blue-100 p-3 rounded-full">
+                                <i class="fas fa-check-circle text-blue-600 text-xl"></i>
+                            </div>
+                            <div class="ml-3">
+                                <p class="font-bold text-gray-900">Certified Professionals school</p>
+                                <p class="text-gray-600 text-sm">Background checked & trained</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+
+   
+    <section id="services" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-blue-600 font-semibold">OUR SERVICES</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2">Professional teaching Services</h2>
+                <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">the activities and support provided by teachers to help students learn and understand subjects effectively. They include lesson planning, classroom instruction, use of teaching materials, assessment and evaluation, and giving feedback to students. Teaching services also involve guiding students, encouraging participation, and adapting methods to meet different learning needs. The main goal of teaching services is to help students gain knowledge, skills, and good values for their academic and personal development.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+               
+                <div class="service-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="download (1).jpeg" alt="Regular Cleaning" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-100 p-2 rounded-full mr-4">
+                               <i class="fas fa-school"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900">learning service</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">involve guiding students, encouraging participation, and adapting</p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span class="text-gray-700">Acquiring knowledge</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span class="text-gray-700">Developing skills</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span class="text-gray-700">Understanding concepts</span>
+                            </li>
+                        </ul>
+                        <div class="flex justify-between items-center">
+                            <span class="text-blue-600 font-bold text-lg"></span>
+                            <button onclick="openBookingModal()" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
+                              More <i class="fas fa-arrow-right ml-2"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="service-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="OIP (1).jpeg" alt="Deep Cleaning" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                	<i class="fas fa-shipping-fast"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900">students support service</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">are services provided by a school to help students succeed academically, socially, and emotionally.</p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span class="text-gray-700">Health and medical services</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span class="text-gray-700">Academic advising</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span class="text-gray-700">Discipline and welfare services</span>
+                            </li>
+                        </ul>
+                        <div class="flex justify-between items-center">
+                            <span class="text-blue-600 font-bold text-lg"></span>
+                            <button onclick="openBookingModal()" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
+                                More <i class="fas fa-arrow-right ml-2"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="service-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="OIP.jpeg" alt="Move In/Out Cleaning" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-home text-blue-600"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900">Administrative services</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">the organizational and management activities of a school that ensure smooth and effective operation.</p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span class="text-gray-700">Scheduling and timetabling</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span class="text-gray-700">Communication with parents and community</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span class="text-gray-700">Financial management</span>
+                            </li>
+                        </ul>
+                        <div class="flex justify-between items-center">
+                            <span class="text-blue-600 font-bold text-lg"></span>
+                            <button onclick="openBookingModal()" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
+                                More<i class="fas fa-arrow-right ml-2"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <button onclick="openBookingModal()" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold text-lg transition duration-300 transform hover:scale-105">
+                    View All Services <i class="fas fa-arrow-right ml-2"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="about" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:flex lg:items-center lg:justify-between">
+                <div class="lg:w-1/2 mb-12 lg:mb-0">
+                    <span class="text-blue-600 font-semibold">WHY CHOOSE US</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2">Kegna Difference</h2>
+                    <p class="mt-4 text-lg text-gray-600">We're not just another school. Our commitment to excellence and customer satisfaction sets us apart.</p>
+                    
+                    <div class="mt-8 space-y-6">
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-100 text-blue-600">
+                                   <i class="fas fa-globe-africa"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-gray-900">E-learning Website</h3>
+                                <p class="mt-2 text-gray-600">online platform designed to provide education and training through the internet. It allows students to access learning materials, attend virtual classes, submit assignments, take quizzes, and interact with teachers and peers from anywhere</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-100 text-blue-600">
+                                    <i class="fas fa-globe-africa"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-gray-900"> financial Management</h3>
+                                <p class="mt-2 text-gray-600">involves activities like budgeting, accounting, funding, and financial planning.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-100 text-blue-600">
+                                    <i class="fas fa-medal"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-gray-900">Satisfaction Guarantee</h3>
+                                <p class="mt-2 text-gray-600">business or service provider that assures customers they will be satisfied with a product or service. If the customer is not satisfied, the company often offers a refund, replacement, or correction.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2 lg:pl-12">
+                    <div class="bg-gray-50 p-8 rounded-xl">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6">Our School Process</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0">
+                                    <div class="flex items-center justify-center h-10 w-10 rounded-full bg-blue-600 text-white font-bold">1</div>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-lg font-medium text-gray-900">Admission Process</h4>
+                                    <p class="mt-1 text-gray-600">Enrollment of new students following application, assessment, and registration.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0">
+                                    <div class="flex items-center justify-center h-10 w-10 rounded-full bg-blue-600 text-white font-bold">2</div>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-lg font-medium text-gray-900">Teaching and Learning</h4>
+                                    <p class="mt-1 text-gray-600">Providing guidance, counseling, health services, and co-curricular activities.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0">
+                                    <div class="flex items-center justify-center h-10 w-10 rounded-full bg-blue-600 text-white font-bold">3</div>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-lg font-medium text-gray-900">Administrative Procedures</h4>
+                                    <p class="mt-1 text-gray-600">We perform a final walkthrough to ensure every detail meets our high standards.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0">
+                                    <div class="flex items-center justify-center h-10 w-10 rounded-full bg-blue-600 text-white font-bold">4</div>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-lg font-medium text-gray-900">Evaluation and Feedback</h4>
+                                    <p class="mt-1 text-gray-600">Monitoring progress, giving feedback, and improving teaching methods.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                                       
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="py-16 bg-blue-600 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <div class="text-4xl font-bold mb-2 animate-bounce-slow">5000+</div>
+                    <p class="text-blue-100">Happy Customers</p>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold mb-2 animate-bounce-slow" style="animation-delay: 0.2s">1200+</div>
+                    <p class="text-blue-100">5-Star Reviews</p>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold mb-2 animate-bounce-slow" style="animation-delay: 0.4s">98%</div>
+                    <p class="text-blue-100">Satisfaction Rate</p>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold mb-2 animate-bounce-slow" style="animation-delay: 0.6s">50+</div>
+                    <p class="text-blue-100">Trained Professionals</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+    <section id="testimonials" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-blue-600 font-semibold">TESTIMONIALS</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2">What Our Clients Say</h2>
+                <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">Don't just take our word for it. Here's what our customers have to say about our services.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <div class="testimonial-card bg-white p-8 rounded-xl shadow-md">
+                    <div class="flex items-center mb-6">
+                        <div class="flex-shrink-0">
+                            <img class="h-12 w-12 rounded-full" src="https://randomuser.me/api/portraits/women/32.jpg" alt="Sarah Johnson">
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg font-medium text-gray-900">Sarah Johnson</h3>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic mb-6">"I've tried several Learning services before, but Kegna is by far the best. They pay attention to every detail and my Student has never looked better. Highly recommend!"</p>
+                    <div class="flex items-center">
+                        <i class="fas fa-map-marker-alt text-gray-400 mr-2"></i>
+                        <span class="text-sm text-gray-500">Adama, or</span>
+                    </div>
+                </div>
+                
+               
+                <div class="testimonial-card bg-white p-8 rounded-xl shadow-md">
+                    <div class="flex items-center mb-6">
+                        <div class="flex-shrink-0">
+                            <img class="h-12 w-12 rounded-full" src="https://randomuser.me/api/portraits/men/54.jpg" alt="Michael Chen">
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg font-medium text-gray-900">Michael Chen</h3>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic mb-6">"As a busy professional, I don't have time to arrive my child. Kegna has been a better school. They're reliable, thorough, and use e-learning website which is important to me."</p>
+                    <div class="flex items-center">
+                        <i class="fas fa-map-marker-alt text-gray-400 mr-2"></i>
+                        <span class="text-sm text-gray-500">Adama, or</span>
+                    </div>
+                </div>
+                
+                
+                <div class="testimonial-card bg-white p-8 rounded-xl shadow-md">
+                    <div class="flex items-center mb-6">
+                        <div class="flex-shrink-0">
+                            <img class="h-12 w-12 rounded-full" src="https://randomuser.me/api/portraits/women/68.jpg" alt="Emily Rodriguez">
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg font-medium text-gray-900">Emily Rodriguez</h3>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic mb-6">"The teaching service was exceptional! We got our full deposit back thanks to their thorough work. The team was professional and even did some extra work we didn't expect."</p>
+                    <div class="flex items-center">
+                        <i class="fas fa-map-marker-alt text-gray-400 mr-2"></i>
+                        <span class="text-sm text-gray-500">Adama, or</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <button onclick="openBookingModal()" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold text-lg transition duration-300 transform hover:scale-105">
+                    Join Our Happy Customers <i class="fas fa-arrow-right ml-2"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+   
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-blue-600 font-semibold">FAQS</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2">Frequently Asked Questions</h2>
+                <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">Have questions? We've got answers. If you can't find what you're looking for, feel free to contact us.</p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto">
+                <div class="space-y-4">
+                  
+                    
+                    
+                   
+                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                        <button onclick="toggleFAQ(2)" class="flex justify-between items-center w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 focus:outline-none">
+                            <span class="text-lg font-medium text-gray-900">What learning Process do you use?</span>
+                            <i id="faq-icon-2" class="fas fa-chevron-down text-blue-600 transition-transform duration-300"></i>
+                        </button>
+                        <div id="faq-content-2" class="hidden px-6 py-4">
+                            <p class="text-gray-600">we use (or that a school typically uses) is a structured approach to help students acquire knowledge, develop skills, and grow personally</p>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                        <button onclick="toggleFAQ(3)" class="flex justify-between items-center w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 focus:outline-none">
+                            <span class="text-lg font-medium text-gray-900">Do I need to be come take my child?</span>
+                            <i id="faq-icon-3" class="fas fa-chevron-down text-blue-600 transition-transform duration-300"></i>
+                        </button>
+                        <div id="faq-content-3" class="hidden px-6 py-4">
+                            <p class="text-gray-600">No, you don't need to be came. Many of our bus provide us with a good drivers for our bus access. All our drivers are background-checked and fully insured for your peace of mind. We can arrange whatever access method works best for you.</p>
+                        </div>
+                    </div>
+                    
+                   
+                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                        <button onclick="toggleFAQ(4)" class="flex justify-between items-center w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 focus:outline-none">
+                            <span class="text-lg font-medium text-gray-900">How do you determine pricing?</span>
+                            <i id="faq-icon-4" class="fas fa-chevron-down text-blue-600 transition-transform duration-300"></i>
+                        </button>
+                        <div id="faq-content-4" class="hidden px-6 py-4">
+                            <p class="text-gray-600">Our pricing is based on several factors including the quality of our school community , the type of learning service requested, and the frequency of service. We offer free online estimates where you can input your home details to get an accurate price.</p>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                        <button onclick="toggleFAQ(5)" class="flex justify-between items-center w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 focus:outline-none">
+                            <span class="text-lg font-medium text-gray-900">What's your cancellation policy?</span>
+                            <i id="faq-icon-5" class="fas fa-chevron-down text-blue-600 transition-transform duration-300"></i>
+                        </button>
+                        <div id="faq-content-5" class="hidden px-6 py-4">
+                            <p class="text-gray-600">We require at least 24 hours notice for cancellations or rescheduling. Cancellations made with less than 24 hours notice may be subject to a fee of 50% of the service cost. For recurring services, we're more flexible with schedule changes.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-12 text-center">
+                    <p class="text-gray-600 mb-4">Still have questions?</p>
+                    <button onclick="openContactModal()" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold text-lg transition duration-300 transform hover:scale-105">
+                        Contact Us <i class="fas fa-envelope ml-2"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+ 
+    <section class="py-16 bg-blue-600 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Experience the kegna  Difference?</h2>
+            <p class="text-xl text-blue-100 mb-8 max-w-3xl mx-auto"> enjoy a spotless home without the hassle.</p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <button onclick="openBookingModal()" class="bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-lg font-semibold text-lg transition duration-300 transform hover:scale-105">
+                    Book <i class="fas fa-calendar-check ml-2"></i>
+                </button>
+                <button class="border-2 border-white text-white hover:bg-white hover:bg-opacity-10 px-8 py-4 rounded-lg font-semibold text-lg transition duration-300">
+                    <i class="fas fa-phone-alt mr-2"></i> Call Now: (+251)0222-12-27-28
+                </button>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="contact" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:flex lg:items-center lg:justify-between">
+                <div class="lg:w-1/2 mb-12 lg:mb-0">
+                    <span class="text-blue-600 font-semibold">CONTACT US</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2">Get In Touch</h2>
+                    <p class="mt-4 text-lg text-gray-600">Have questions or special requests? We'd love to hear from you.</p>
+                    
+                    <div class="mt-8 space-y-6">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-100 text-blue-600">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-gray-900">Our Office</h3>
+                                <p class="mt-1 text-gray-600">be side Muse Hospital after 200m<br>Adama, Or</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-100 text-blue-600">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-gray-900">Phone</h3>
+                                <p class="mt-1 text-gray-600">(+251)0222-12-27-28</p><br>Mon-Fri: 8:10am-9:15pm</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-100 text-blue-600">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-gray-900">Email</h3>
+                                <p class="mt-1 text-gray-600">KegnaAcademy@gmail.com<br>We respond within 24 hours</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h3 class="text-lg font-medium text-gray-900 mb-4">Follow Us</h3>
+                        <div class="flex space-x-4">
+                            <a href="#" class="h-10 w-10 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center hover:bg-blue-200 transition duration-300">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="h-10 w-10 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center hover:bg-blue-200 transition duration-300">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="h-10 w-10 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center hover:bg-blue-200 transition duration-300">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="h-10 w-10 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center hover:bg-blue-200 transition duration-300">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2 lg:pl-12">
+                    <div class="bg-white p-8 rounded-xl booking-form">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6">Send Us a Message</h3>
+                        <form>
+                            <div class="mb-6">
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="John Doe">
+                            </div>
+                            <div class="mb-6">
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                                <input type="email" id="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="john@example.com">
+                            </div>
+                            <div class="mb-6">
+                                <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                                <input type="tel" id="phone" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="(123) 456-7890">
+                            </div>
+                            <div class="mb-6">
+                                <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Your Message</label>
+                                <textarea id="message" rows="4" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="How can we help you?"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold text-lg transition duration-300">
+                                Send Message <i class="fas fa-paper-plane ml-2"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-broom text-blue-500 text-2xl mr-2"></i>
+                        <span class="text-xl font-bold">Kegna Academy</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">Professional teaching services that bring the kegna back to your living space.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">learning service</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">students support service</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">
+Administrative services</a></li>
+                        
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Company</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Our Team</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Careers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Press</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Support</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Contact Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">FAQs</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Terms of Service</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Satisfaction Guarantee</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2025 Kegna Academy. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+    <div id="booking-modal" class="fixed inset-0 z-50 hidden overflow-y-auto">
+        <div class="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+            <div class="fixed inset-0 transition-opacity" aria-hidden="true">
+                <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+            </div>
+            
+            <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+            
+            <div class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-2xl sm:w-full">
+                <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                    <div class="sm:flex sm:items-start">
+                        <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left w-full">
+                            <div class="flex justify-between items-center mb-4">
+                                <h3 class="text-2xl leading-6 font-bold text-gray-900">Book a Cleaning Service</h3>
+                                <button onclick="closeModal('booking-modal')" class="text-gray-400 hover:text-gray-500">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                            <div class="mt-2">
+                                <form>
+                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                        <div>
+                                            <label for="service-type" class="block text-sm font-medium text-gray-700 mb-1">Service Type</label>
+                                            <select id="service-type" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                                <option value="">Select a service</option>
+                                                <option value="regular">Regular Cleaning</option>
+                                                <option value="deep">Deep Cleaning</option>
+                                                <option value="move">Move In/Out Cleaning</option>
+                                                <option value="post-construction">Post-Construction Cleaning</option>
+                                                <option value="commercial">Commercial Cleaning</option>
+                                            </select>
+                                        </div>
+                                        <div>
+                                            <label for="frequency" class="block text-sm font-medium text-gray-700 mb-1">Frequency</label>
+                                            <select id="frequency" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                                <option value="one-time">One-Time Service</option>
+                                                <option value="weekly">Weekly</option>
+                                                <option value="bi-weekly">Bi-Weekly</option>
+                                                <option value="monthly">Monthly</option>
+                                            </select>
+                                        </div>
+                                        <div>
+                                            <label for="date" class="block text-sm font-medium text-gray-700 mb-1">Preferred Date</label>
+                                            <input type="date" id="date" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                        </div>
+                                        <div>
+                                            <label for="time" class="block text-sm font-medium text-gray-700 mb-1">Preferred Time</label>
+                                            <select id="time" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                                <option value="morning">Morning (8am-12pm)</option>
+                                                <option value="afternoon">Afternoon (12pm-4pm)</option>
+                                                <option value="evening">Evening (4pm-8pm)</option>
+                                            </select>
+                                        </div>
+                                        <div>
+                                            <label for="bedrooms" class="block text-sm font-medium text-gray-700 mb-1">Number of Bedrooms</label>
+                                            <select id="bedrooms" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5+">5+</option>
+                                            </select>
+                                        </div>
+                                        <div>
+                                            <label for="bathrooms" class="block text-sm font-medium text-gray-700 mb-1">Number of Bathrooms</label>
+                                            <select id="bathrooms" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5+">5+</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="mt-6">
+                                        <label for="special-requests" class="block text-sm font-medium text-gray-700 mb-1">Special Requests</label>
+                                        <textarea id="special-requests" rows="3" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Any specific areas that need extra attention?"></textarea>
+                                    </div>
+                                    <div class="mt-6 bg-blue-50 p-4 rounded-lg">
+                                        <div class="flex items-center">
+                                            <div class="flex-shrink-0">
+                                                <i class="fas fa-info-circle text-blue-600"></i>
+                                            </div>
+                                            <div class="ml-3">
+                                                <p class="text-sm text-blue-700">
+                                                    <span class="font-bold">First-time customer?</span> Use code WELCOME20 at checkout for 20% off your first cleaning!
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+                    <button type="button" class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-blue-600 text-base font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:ml-3 sm:w-auto sm:text-sm">
+                        Continue to Checkout
+                    </button>
+                    <button type="button" onclick="closeModal('booking-modal')" class="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm">
+                        Cancel
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+    <div id="contact-modal" class="fixed inset-0 z-50 hidden overflow-y-auto">
+        <div class="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+            <div class="fixed inset-0 transition-opacity" aria-hidden="true">
+                <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+            </div>
+            
+            <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+            
+            <div class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
+                <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                    <div class="sm:flex sm:items-start">
+                        <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left w-full">
+                            <div class="flex justify-between items-center mb-4">
+                                <h3 class="text-2xl leading-6 font-bold text-gray-900">Contact Us</h3>
+                                <button onclick="closeModal('contact-modal')" class="text-gray-400 hover:text-gray-500">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                            <div class="mt-2">
+                                <form>
+                                    <div class="mb-4">
+                                        <label for="contact-name" class="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
+                                        <input type="text" id="contact-name" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="John Doe">
+                                    </div>
+                                    <div class="mb-4">
+                                        <label for="contact-email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                                        <input type="email" id="contact-email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="john@example.com">
+                                    </div>
+                                    <div class="mb-4">
+                                        <label for="contact-subject" class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
+                                        <input type="text" id="contact-subject" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="How can we help?">
+                                    </div>
+                                    <div class="mb-4">
+                                        <label for="contact-message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                                        <textarea id="contact-message" rows="4" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Your message here..."></textarea>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+                    <button type="button" class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-blue-600 text-base font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:ml-3 sm:w-auto sm:text-sm">
+                        Send Message
+                    </button>
+                    <button type="button" onclick="closeModal('contact-modal')" class="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm">
+                        Cancel
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        
+        function toggleFAQ(number) {
+            const content = document.getElementById(`faq-content-${number}`);
+            const icon = document.getElementById(`faq-icon-${number}`);
+            
+            content.classList.toggle('hidden');
+            icon.classList.toggle('fa-chevron-down');
+            icon.classList.toggle('fa-chevron-up');
+        }
+
+        
+        function openBookingModal() {
+            document.getElementById('booking-modal').classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+        }
+
+        function openContactModal() {
+            document.getElementById('contact-modal').classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        window.onclick = function(event) {
+            if (event.target === document.getElementById('booking-modal')) {
+                closeModal('booking-modal');
+            }
+            if (event.target === document.getElementById('contact-modal')) {
+                closeModal('contact-modal');
+            }
+        }
+
+        
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                    
+                   
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 10) {
+                nav.classList.add('shadow-lg');
+            } else {
+                nav.classList.remove('shadow-lg');
+            }
+        });
+    </script>
+<p style="border-radius: 8px; text-align: center; font-size: 12px; color: #fff; margin-top: 16px;position: fixed; left: 8px; bottom: 8px; z-index: 10; background: rgba(0, 0, 0, 0.8); padding: 4px 8px;">Made with <img src="https://enzostvs-deepsite.hf.space/logo.svg" alt="DeepSite Logo" style="width: 16px; height: 16px; vertical-align: middle;display:inline-block;margin-right:3px;filter:brightness(0) invert(1);"><a href="https://enzostvs-deepsite.hf.space" style="color: #fff;text-decoration: underline;" target="_blank" >DeepSite</a> - 🧬 <a href="https://enzostvs-deepsite.hf.space?remix=kalabs/home-cleaning" style="color: #fff;text-decoration: underline;" target="_blank" >Remix</a></p></body>
+</html>
