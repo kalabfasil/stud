@@ -26,9 +26,7 @@
                     <a href="#about" class="nav-link text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium">About</a>
                     <a href="#testimonials" class="nav-link text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium">Testimonials</a>
                     <a href="#contact" class="nav-link text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium">Contact</a>
-                    <button onclick="openBookingModal()" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-300 transform hover:scale-105">
-                        Checkout
-                    </button>
+                    
                 </div>
                 <div class="-mr-2 flex items-center md:hidden">
                     <button type="button" id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100 focus:outline-none">
@@ -46,9 +44,7 @@
                 <a href="#about" class="block px-3 py-2 text-base font-medium text-gray-900 hover:text-blue-600">About</a>
                 <a href="#testimonials" class="block px-3 py-2 text-base font-medium text-gray-900 hover:text-blue-600">Testimonials</a>
                 <a href="#contact" class="block px-3 py-2 text-base font-medium text-gray-900 hover:text-blue-600">Contact</a>
-                <button onclick="openBookingModal()" class="w-full text-left px-3 py-2 text-base font-medium text-blue-600 hover:text-blue-800">
-                    Checkout
-                </button>
+               
             </div>
         </div>
     </nav>
@@ -719,93 +715,7 @@ Administrative services</a></li>
             
             <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
             
-            <div class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-2xl sm:w-full">
-                <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
-                    <div class="sm:flex sm:items-start">
-                        <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left w-full">
-                            <div class="flex justify-between items-center mb-4">
-                                <h3 class="text-2xl leading-6 font-bold text-gray-900">Book a Cleaning Service</h3>
-                                <button onclick="closeModal('booking-modal')" class="text-gray-400 hover:text-gray-500">
-                                    <i class="fas fa-times"></i>
-                                </button>
-                            </div>
-                            <div class="mt-2">
-                                <form>
-                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                        <div>
-                                            <label for="service-type" class="block text-sm font-medium text-gray-700 mb-1">Service Type</label>
-                                            <select id="service-type" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
-                                                <option value="">Select a service</option>
-                                                <option value="regular">Regular Cleaning</option>
-                                                <option value="deep">Deep Cleaning</option>
-                                                <option value="move">Move In/Out Cleaning</option>
-                                                <option value="post-construction">Post-Construction Cleaning</option>
-                                                <option value="commercial">Commercial Cleaning</option>
-                                            </select>
-                                        </div>
-                                        <div>
-                                            <label for="frequency" class="block text-sm font-medium text-gray-700 mb-1">Frequency</label>
-                                            <select id="frequency" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
-                                                <option value="one-time">One-Time Service</option>
-                                                <option value="weekly">Weekly</option>
-                                                <option value="bi-weekly">Bi-Weekly</option>
-                                                <option value="monthly">Monthly</option>
-                                            </select>
-                                        </div>
-                                        <div>
-                                            <label for="date" class="block text-sm font-medium text-gray-700 mb-1">Preferred Date</label>
-                                            <input type="date" id="date" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
-                                        </div>
-                                        <div>
-                                            <label for="time" class="block text-sm font-medium text-gray-700 mb-1">Preferred Time</label>
-                                            <select id="time" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
-                                                <option value="morning">Morning (8am-12pm)</option>
-                                                <option value="afternoon">Afternoon (12pm-4pm)</option>
-                                                <option value="evening">Evening (4pm-8pm)</option>
-                                            </select>
-                                        </div>
-                                        <div>
-                                            <label for="bedrooms" class="block text-sm font-medium text-gray-700 mb-1">Number of Bedrooms</label>
-                                            <select id="bedrooms" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                                <option value="4">4</option>
-                                                <option value="5+">5+</option>
-                                            </select>
-                                        </div>
-                                        <div>
-                                            <label for="bathrooms" class="block text-sm font-medium text-gray-700 mb-1">Number of Bathrooms</label>
-                                            <select id="bathrooms" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                                <option value="4">4</option>
-                                                <option value="5+">5+</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="mt-6">
-                                        <label for="special-requests" class="block text-sm font-medium text-gray-700 mb-1">Special Requests</label>
-                                        <textarea id="special-requests" rows="3" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Any specific areas that need extra attention?"></textarea>
-                                    </div>
-                                    <div class="mt-6 bg-blue-50 p-4 rounded-lg">
-                                        <div class="flex items-center">
-                                            <div class="flex-shrink-0">
-                                                <i class="fas fa-info-circle text-blue-600"></i>
-                                            </div>
-                                            <div class="ml-3">
-                                                <p class="text-sm text-blue-700">
-                                                    <span class="font-bold">First-time customer?</span> Use code WELCOME20 at checkout for 20% off your first cleaning!
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+           
                 <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
                     <button type="button" class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-blue-600 text-base font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:ml-3 sm:w-auto sm:text-sm">
                         Continue to Checkout
@@ -949,4 +859,5 @@ Administrative services</a></li>
         });
     </script>
 <p style="border-radius: 8px; text-align: center; font-size: 12px; color: #fff; margin-top: 16px;position: fixed; left: 8px; bottom: 8px; z-index: 10; background: rgba(0, 0, 0, 0.8); padding: 4px 8px;">Made with <img src="https://enzostvs-deepsite.hf.space/logo.svg" alt="DeepSite Logo" style="width: 16px; height: 16px; vertical-align: middle;display:inline-block;margin-right:3px;filter:brightness(0) invert(1);"><a href="https://enzostvs-deepsite.hf.space" style="color: #fff;text-decoration: underline;" target="_blank" >DeepSite</a> - 🧬 <a href="https://enzostvs-deepsite.hf.space?remix=kalabs/home-cleaning" style="color: #fff;text-decoration: underline;" target="_blank" >Remix</a></p></body>
+
 </html>
